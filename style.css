@@ -1,0 +1,566 @@
+/* =========================================================
+   JORNADA DE INOVAÇÃO
+   9º ANO — ENSINO FUNDAMENTAL II
+   SESI CE-397
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(215, 25, 32, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(215, 25, 32, 0.08),
+      transparent 35%
+    ),
+    #111;
+
+  color: #fff;
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.topo {
+  width: 100%;
+  min-height: 115px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 20px 6%;
+
+  background: rgba(17, 17, 17, 0.96);
+
+  border-bottom: 2px solid #d71920;
+
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+/* LOGO */
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 25px;
+}
+
+.logo-area img {
+  width: 82px;
+  height: 82px;
+
+  object-fit: contain;
+
+  border-radius: 10px;
+
+  transition: 0.3s ease;
+}
+
+.logo-area img:hover {
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.titulo-area {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.titulo-area span {
+  color: #d71920;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+.titulo-area h1 {
+  font-size: 28px;
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+.titulo-area p {
+  font-size: 16px;
+
+  color: #ccc;
+}
+
+.titulo-area strong {
+  color: #d71920;
+}
+
+
+/* =========================================================
+   APRESENTAÇÃO
+   ========================================================= */
+
+.apresentacao {
+  max-width: 1200px;
+
+  margin: 55px auto 35px;
+
+  padding: 0 25px;
+
+  text-align: center;
+}
+
+
+/* TAG SESI */
+
+.tag {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 15px;
+
+  border: 1px solid #d71920;
+
+  border-radius: 30px;
+
+  color: #d71920;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  letter-spacing: 1px;
+}
+
+
+/* TÍTULO ESTUDANTES */
+
+.apresentacao h2 {
+  font-size: 38px;
+
+  margin-bottom: 12px;
+}
+
+
+/* TEXTO */
+
+.apresentacao p {
+  color: #cfcfcf;
+
+  font-size: 17px;
+
+  line-height: 1.6;
+}
+
+
+/* PROFESSOR */
+
+.apresentacao .professor {
+  margin-top: 12px;
+
+  color: #aaa;
+}
+
+.apresentacao .professor strong {
+  color: #fff;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+  width: 100%;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 15px 25px 60px;
+}
+
+
+/* =========================================================
+   LISTA DE ESTUDANTES
+   ========================================================= */
+
+.lista-estudantes {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   CARD DO ESTUDANTE
+   ========================================================= */
+
+.estudante {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  min-height: 85px;
+
+  padding: 15px 18px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-left: 4px solid #d71920;
+
+  border-radius: 12px;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.estudante:hover {
+  transform: translateY(-4px);
+
+  background: rgba(215, 25, 32, 0.08);
+
+  border-color: rgba(215, 25, 32, 0.5);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   NÚMERO
+   ========================================================= */
+
+.numero {
+  min-width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 15px;
+
+  border-radius: 50%;
+
+  background: #d71920;
+
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   NOME
+   ========================================================= */
+
+.dados {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.dados h3 {
+  font-size: 17px;
+
+  font-weight: 600;
+
+  color: #fff;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   BOTÃO FORMULÁRIO
+   ========================================================= */
+
+.botao {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 145px;
+
+  padding: 11px 16px;
+
+  margin-left: 15px;
+
+  background: #d71920;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.botao:hover {
+  background: #f02028;
+
+  transform: scale(1.04);
+
+  box-shadow:
+    0 5px 15px rgba(215, 25, 32, 0.35);
+}
+
+.botao:active {
+  transform: scale(0.98);
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.rodape {
+  width: 100%;
+
+  padding: 30px 20px;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(0, 0, 0, 0.25);
+
+  color: #888;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.rodape p:first-child {
+  color: #aaa;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .lista-estudantes {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET MENOR
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .topo {
+    padding: 18px 20px;
+  }
+
+  .logo-area {
+    margin-right: 15px;
+  }
+
+  .logo-area img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .titulo-area h1 {
+    font-size: 21px;
+  }
+
+  .titulo-area span {
+    font-size: 11px;
+  }
+
+  .titulo-area p {
+    font-size: 14px;
+  }
+
+  .apresentacao {
+    margin-top: 40px;
+  }
+
+  .apresentacao h2 {
+    font-size: 32px;
+  }
+
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+  .topo {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 25px 15px;
+  }
+
+  .logo-area {
+    margin-right: 0;
+
+    margin-bottom: 15px;
+  }
+
+  .logo-area img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .titulo-area {
+    align-items: center;
+  }
+
+  .titulo-area h1 {
+    font-size: 20px;
+
+    line-height: 1.3;
+  }
+
+  .apresentacao {
+    margin-top: 35px;
+
+    padding: 0 18px;
+  }
+
+  .apresentacao h2 {
+    font-size: 28px;
+  }
+
+  .apresentacao p {
+    font-size: 15px;
+  }
+
+  .container {
+    padding: 10px 15px 45px;
+  }
+
+
+  /* CARD */
+
+  .estudante {
+    flex-wrap: wrap;
+
+    padding: 16px;
+
+    gap: 10px;
+  }
+
+
+  /* NÚMERO */
+
+  .numero {
+    width: 38px;
+    height: 38px;
+
+    min-width: 38px;
+
+    margin-right: 8px;
+  }
+
+
+  /* NOME */
+
+  .dados {
+    flex: 1;
+  }
+
+  .dados h3 {
+    font-size: 16px;
+  }
+
+
+  /* BOTÃO */
+
+  .botao {
+    width: 100%;
+
+    margin-left: 0;
+
+    margin-top: 5px;
+
+    padding: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .titulo-area h1 {
+    font-size: 18px;
+  }
+
+  .apresentacao h2 {
+    font-size: 25px;
+  }
+
+  .dados h3 {
+    font-size: 15px;
+  }
+
+}
